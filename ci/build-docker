@@ -1,0 +1,9 @@
+#!/bin/sh
+
+ROOT=$(realpath $(dirname $0)/../)
+BASE_PATH=$ROOT/ci/docker
+
+for d in $(ls $BASE_PATH); do
+        cd $BASE_PATH/$d
+        ./build
+done
